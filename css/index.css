@@ -198,4 +198,7 @@ body footer {
   height: 2.5rem;
   position: absolute;
   bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
