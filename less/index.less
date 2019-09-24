@@ -23,6 +23,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	font-family: 'Raleway', sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -58,21 +59,29 @@ html, body {
 }
 
 header {
-	width: 100%; 
-	display: flex; 
+	width: 100%;
+	position: fixed;  
+	top:0; 
+	z-index: 1;
+	background-color: grey;
+	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+	height: 4rem;
+	box-shadow: 0px 0px 5px 0px rgba(187, 187, 187, 1);
+
 
 	nav {
-		border: 1px solid green; 
+		// border: 1px solid green; 
 		width: 50%; 
 		display: flex;
 		justify-content: space-evenly; 
 
 		p, a {
 			padding: 3%;
+			font-size: 1.2rem; 
 			text-decoration: none; 
-			color: rgb(34, 34, 34);  
+			color: white;  
 		}
 
 		
@@ -81,27 +90,32 @@ header {
 
 
 .container {
-	border: 1px dashed black; 
+	// border: 1px dashed black; 
 	width: 100%;
 	display: flex;
 	min-height: 90vh; 
 	overflow: hidden;
 	position: relative;
+	margin-top: 4rem; 
 
 
 	.left-column {
-		border: 1px solid blue;
-		background-color: rgb(190, 242, 255);  
-		width: 30%;
+		border: 0px 1px 0px 0px solid blue;
+		padding: 1%; 
+		background-color: rgba(30, 143, 255, 0.719);  
+		width: 25%;
 		display:flex;
 		flex-direction: column; 
+		box-shadow: 0px 0px 3px 0px rgba(187, 187, 187, 1);
+		
 		
 		.box {
 			border: 1px solid pink;
 			align-self: stretch;
-			height: auto; 
-			width: 100%;
-			padding: 5% 5% 5% 10%; 
+			height: 25%; 
+			width: 96%;
+			margin: 3% 0% 3% 0%; 
+			align-self: center; 
 			
 			.box-content h1 {
 				font-size: 2rem;
@@ -120,32 +134,43 @@ header {
 	}
 
 	.right-column {
-		border: 1px solid red; 
-		background-color: lightcyan; 
-		width: 70%;
+		// border: 1px solid red; 
+		padding: 1%; 
+		background-color: white; 
+		width: 75%;
 		
 		.box {
-			border: 1px solid green; 
+			// border: 1px solid grey; 
 			height: auto;
-			width: 100%;
+			width: 98%;
+			padding: 1%; 
+			margin: 1%; 
 
 			.box-title {
-				padding: 1%;
+				padding:;
+				margin-bottom: 1%; 
 				font-size: 1.2rem; 
 			}
 
 			.group-box {
 				display: flex;
-				padding: 0.5% 2% 0.5% 2%;  
+				justify-content: space-between; 
+				padding: 1%; 
+			
 
 				.left-box {
-					border: 1px dotted grey; 
-					width: 30%;
-					padding: 0.25% 0% 0% 1%;   
+					// border: 1px dotted grey; 
+					text-align: center;
+					width: 20%;
+					padding: ; 
+					
+					h3 {
+						font-weight: bold; 
+					}
 				}
 
 				.right-box {
-					border: 1px dotted black; 
+					// border: 1px dotted black; 
 					width: 70%; 
 				}
 			} 
@@ -156,7 +181,9 @@ header {
 
 body {
 	footer {
-		border: 1px solid red; 
+		// border: 1px solid red;
+		background-color: black; 
+		color: white;  
 		width: 100%; 
 		height: 2.5rem;
 		display: flex; 
