@@ -128,8 +128,10 @@ table {
   border-spacing: 0;
 }
 /* Set every element's box-sizing to border-box */
-.border {
-  border: ;
+@media (max-width: 500px) {
+  .border {
+    border: 1px dashed grey;
+  }
 }
 * {
   box-sizing: border-box;
@@ -151,10 +153,14 @@ header {
   box-shadow: 0px 0px 5px 0px #bbbbbb;
 }
 header nav {
-  border: ;
   width: 50%;
   display: flex;
   justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  header nav {
+    border: 1px dashed grey;
+  }
 }
 header nav p,
 header nav a {
@@ -167,14 +173,34 @@ header nav p,
 header nav a:hover {
   color: orange;
 }
+@media (max-width: 500px) {
+  header .right-header,
+  header .left-header {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  header nav {
+    width: 100%;
+  }
+}
 .container {
-  border: ;
   width: 100%;
   display: flex;
   min-height: 90vh;
   overflow: hidden;
   position: relative;
   margin-top: 4rem;
+}
+@media (max-width: 500px) {
+  .container {
+    border: 1px dashed grey;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
 }
 .container .left-column {
   border-right: 1px solid rgba(0, 0, 255, 0.425);
@@ -187,13 +213,22 @@ header nav a:hover {
   box-shadow: 0px 0px 3px 0px #bbbbbb;
   color: #fde6e6;
 }
+@media (max-width: 500px) {
+  .container .left-column {
+    width: auto;
+  }
+}
 .container .left-column .box {
-  border: ;
   align-self: stretch;
   height: auto;
   width: 96%;
   margin: 10% 0% 3% 0%;
   align-self: center;
+}
+@media (max-width: 500px) {
+  .container .left-column .box {
+    border: 1px dashed grey;
+  }
 }
 .container .left-column .box .box-content h1 {
   font-size: 2rem;
@@ -211,7 +246,6 @@ header nav a:hover {
   padding: 1%;
 }
 .container .right-column {
-  border: ;
   padding: 1%;
   background-color: white;
   width: 75%;
@@ -220,12 +254,26 @@ header nav a:hover {
   justify-content: space-between;
   color: black;
 }
+@media (max-width: 500px) {
+  .container .right-column {
+    border: 1px dashed grey;
+  }
+}
+@media (max-width: 500px) {
+  .container .right-column {
+    width: auto;
+  }
+}
 .container .right-column .box {
-  border: ;
   height: auto;
-  width: 98%;
+  width: 100%;
   padding: 1%;
   margin: 1%;
+}
+@media (max-width: 500px) {
+  .container .right-column .box {
+    border: 1px dashed grey;
+  }
 }
 .container .right-column .box .box-title {
   padding: 1%;
@@ -239,17 +287,25 @@ header nav a:hover {
   padding: 1%;
 }
 .container .right-column .box .group-box .left-box {
-  border: ;
   text-align: center;
   width: 20%;
   padding: ;
+}
+@media (max-width: 500px) {
+  .container .right-column .box .group-box .left-box {
+    border: 1px dashed grey;
+  }
 }
 .container .right-column .box .group-box .left-box h3 {
   font-weight: bold;
 }
 .container .right-column .box .group-box .right-box {
-  border: ;
   width: 70%;
+}
+@media (max-width: 500px) {
+  .container .right-column .box .group-box .right-box {
+    border: 1px dashed grey;
+  }
 }
 .container .right-column .box .group-box .right-box img {
   margin-right: 1%;
@@ -291,7 +347,6 @@ header nav a:hover {
   transition-timing-function: ease-in-out;
 }
 body footer {
-  border: ;
   background-color: black;
   color: white;
   width: 100%;
@@ -299,4 +354,14 @@ body footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 500px) {
+  body footer {
+    border: 1px dashed grey;
+  }
+}
+@media (max-width: 500px) {
+  body footer {
+    font-size: 0.8rem;
+  }
 }
