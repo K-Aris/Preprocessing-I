@@ -1,1 +1,367 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Raleway', sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1.3;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+@media (max-width: 500px) {
+  .border {
+    border: 1px dashed grey;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: grey;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 4rem;
+  box-shadow: 0px 0px 5px 0px #bbbbbb;
+}
+header nav {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  header nav {
+    border: 1px dashed grey;
+  }
+}
+header nav p,
+header nav a {
+  padding: 3%;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+}
+header nav p,
+header nav a:hover {
+  color: orange;
+}
+@media (max-width: 500px) {
+  header .right-header,
+  header .left-header {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  header nav {
+    width: 100%;
+  }
+}
+.container {
+  width: 100%;
+  display: flex;
+  min-height: 90vh;
+  overflow: hidden;
+  position: relative;
+  margin-top: 4rem;
+}
+@media (max-width: 500px) {
+  .container {
+    border: 1px dashed grey;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+}
+.container .left-column {
+  border-right: 1px solid rgba(0, 0, 255, 0.425);
+  padding: 1%;
+  background-color: rgba(32, 69, 105, 0.719);
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  box-shadow: 0px 0px 3px 0px #bbbbbb;
+  color: #fde6e6;
+}
+@media (max-width: 500px) {
+  .container .left-column {
+    width: auto;
+  }
+}
+.container .left-column .box {
+  align-self: stretch;
+  height: auto;
+  width: 96%;
+  margin: 10% 0% 3% 0%;
+  align-self: center;
+}
+@media (max-width: 500px) {
+  .container .left-column .box {
+    border: 1px dashed grey;
+  }
+}
+.container .left-column .box .box-content h1 {
+  font-size: 2rem;
+  padding: 5% 5% 3% 0%;
+}
+.container .left-column .box .box-content h2 {
+  font-size: 1.5rem;
+  padding: 5% 5% 3% 0%;
+}
+.container .left-column .box .box-content p {
+  padding: 5%;
+  font-weight: 100;
+}
+.container .left-column .box .box-content img {
+  padding: 1%;
+}
+.container .right-column {
+  padding: 1%;
+  background-color: white;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: black;
+}
+@media (max-width: 500px) {
+  .container .right-column {
+    border: 1px dashed grey;
+  }
+}
+@media (max-width: 500px) {
+  .container .right-column {
+    width: auto;
+  }
+}
+.container .right-column .box {
+  height: auto;
+  width: 100%;
+  padding: 1%;
+  margin: 1%;
+}
+@media (max-width: 500px) {
+  .container .right-column .box {
+    border: 1px dashed grey;
+  }
+}
+.container .right-column .box .box-title {
+  padding: 1%;
+  margin-bottom: 1%;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+.container .right-column .box .group-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+}
+.container .right-column .box .group-box .left-box {
+  text-align: center;
+  width: 20%;
+  padding: ;
+}
+@media (max-width: 500px) {
+  .container .right-column .box .group-box .left-box {
+    border: 1px dashed grey;
+  }
+}
+.container .right-column .box .group-box .left-box h3 {
+  font-weight: bold;
+}
+.container .right-column .box .group-box .right-box {
+  width: 70%;
+}
+@media (max-width: 500px) {
+  .container .right-column .box .group-box .right-box {
+    border: 1px dashed grey;
+  }
+}
+.container .right-column .box .group-box .right-box img {
+  margin-right: 1%;
+}
+.container .right-column .box .group-box .text-box {
+  padding: 0% 5% 0% 5%;
+}
+.box-content .contact-container {
+  border-radius: 5px;
+  background-color: rgba(245, 245, 245, 0);
+  padding: 10px;
+  margin: 2%;
+}
+.box-content input[type=text],
+.box-content select,
+.box-content textarea {
+  width: 95%;
+  padding: 3% 0% 3% 0%;
+  border: 1px solid white;
+  border-radius: 5px 0px;
+  box-sizing: border-box;
+  margin: 5% 0% 5% 0%;
+  resize: vertical;
+  outline: transparent;
+  background-color: rgba(194, 194, 194, 0.233);
+}
+.box-content input[type=submit] {
+  background-color: rgba(0, 0, 0, 0.301);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0px 10px;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
+}
+.box-content input[type=submit]:hover {
+  background-color: rgba(0, 0, 0, 0.664);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+body footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  body footer {
+    border: 1px dashed grey;
+  }
+}
+@media (max-width: 500px) {
+  body footer {
+    font-size: 0.8rem;
+  }
+}
